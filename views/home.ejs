@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+
+
+
+<div class="mb-14 mt-28 flex  mx-auto content-center">
+    <span class=" content-center bg-white mx-auto opacity-90 px-2 text-2xl text-blue-800 shadow rounded  font-bold">Home</span>
+</div>
+
+<%  posts.forEach(function(post){ %>
+    <div id="content" class="w-3/5 shadow-xl mx-auto   my-5 rounded">
+
+ 
+  <p class="px-3 py-2  font-medium text-xl mx-7"><%=post.title%> </p>
+   
+   <div class="flex mx-auto ">
+    <p class="px-3 py-2 mb-3 mx-auto text-sm font-medium">
+      <%=post.content%>
+     </p>
+     <a href="/posts/<%=post.title%>">   <button class=" px-2 py-1 top-0 mb-3 pb-1 mx-10  bg-blue-600 rounded-md text-white">Read More</button></a>
+  
+   </div>
+   
+</div>
+  
+
+</div>
+<% }) %>
+
+
+<%- include("partials/footer"); -%>

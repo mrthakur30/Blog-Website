@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+<div class="my-3 flex mx-auto content-center">
+       <span class=" content-center mx-auto opacity-90 px-2 text-2xl text-black shadow rounded  font-bold">Compose</span>
+</div>
+
+<div class="mx-auto my-4  px-1  py-1"> 
+    <form class="rounded px-2 py-1 mx-auto" action="/compose" method="post">
+      <div class="right shadow  flex-col flex rounded-md w-1/2 mx-auto  bg-white px-4 py-4">
+        <span class=" mx-auto content-center items-center text-sm text-violet-600  font-bold dark:text-gray-800">Title
+        </span>
+        <input class="px-5 border border-gray-200 border-1 py-2 my-2 rounded-md" name="postTitle" type="text" placeholder="">
+        <span class=" mx-auto content-center items-center text-sm text-violet-600  font-bold dark:text-gray-800">Post
+        </span>
+        <textarea class="form-control px-5 border border-gray-200 border-1 my-2 py-2 rounded-md" name="postBody" rows="8" cols="80"></textarea>
+        <button type="submit" class="bg-blue-600 text-white rounded-sm px-5 my-2 py-2 font-bold" >Publish</button>
+      </div>
+    </form>
+  </div>
+  
+
+
+ 
+<%- include("partials/footer"); -%>
