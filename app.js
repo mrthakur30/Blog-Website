@@ -30,10 +30,10 @@ app.get("/", function(req, res){
 
   Post.find({},function(err,posts){
     res.render("home", {
-      posts: posts 
+      posts: posts
       });
   });
- 
+
 });
 
 app.get("/about", function(req, res){
@@ -49,7 +49,7 @@ app.get("/compose", function(req, res){
 });
 
 app.post("/compose", function(req, res){
- 
+
   const post = new Post({
     title: req.body.postTitle ,
     content: req.body.postBody
@@ -76,6 +76,6 @@ app.get("/posts/:postName", function(req, res){
   });
 });
 
-app.listen(3000, function() {
+app.listen(3001, function() {
   console.log("Server started on port 3000");
 });
